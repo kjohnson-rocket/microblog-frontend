@@ -39,6 +39,7 @@ export default new Vuex.Store({
         localStorage.setItem('user', matchedUser.username)
         localStorage.setItem('token', 'true')
         commit(LOGIN_SUCCESS)
+        console.log(string.concat('new login: ', matchedUser.username), out)
       } else {
         axios.post(`${process.env.VUE_APP_BASE_API_URL}/api/token/`, creds,
           {
